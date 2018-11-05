@@ -1,0 +1,32 @@
+.nav{
+  margin-right:15px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.nav__list {
+  display:flex;
+}
+
+.nav__item:last-child .nav__link:after {
+  display:none;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 10px;
+  }
+}
+

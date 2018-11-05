@@ -1,0 +1,128 @@
+@import url(./loyout/normalize.css);
+@import url(./loyout/reset.css);
+@import url(./loyout/loyout.css);
+@font-face {
+  font-family: "Gagalin-Regular";
+  font-family: url("../fonts/Gagalin/Gagalin-Regular.otf");
+  font-style: normal;
+  font-weight: normal; }
+
+.hero {
+  background: url("../../img/hero-img.png") center center/cover no-repeat; }
+
+.hero__desc {
+  font-size: 45px;
+  color: #fff; }
+
+.hero__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.hero__container {
+  -webkit-box-flex: .75;
+  -ms-flex: .75;
+  flex: .75; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 12px; }
+
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.nav {
+  margin-right: 15px;
+  font-family: 'Ubuntu', sans-serif; }
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.nav__item:last-child .nav__link:after {
+  display: none; }
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .nav__link:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 10px; }
+
+.btn {
+  border-radius: 5px;
+  padding: 13px 15px;
+  background: #e45028;
+  color: #fff;
+  text-decoration: none; }
+
+.title {
+  color: #f9b43b;
+  font-size: 72px;
+  margin-bottom: 35px;
+  text-align: center;
+  font-family: "Gagalin-Regular";
+  font-style: normal; }
+  .title--color-black {
+    color: black; }
+
+.best {
+  background: url("../img/best-bg.png") center center/cover no-repeat; }
+
+.best__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.best__item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.best__desc {
+  text-align: center; }

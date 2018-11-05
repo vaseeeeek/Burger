@@ -1,0 +1,16 @@
+.section {
+  height: 100vh;
+  min-height: 650px;
+}
+.container {
+  margin: 0 auto;
+  width: 940px; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+    &--without-align {
+      justify-content : initial;
+    }
+}

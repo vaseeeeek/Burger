@@ -1,0 +1,22 @@
+@font-face{
+  font-family: "Gagalin-Regular"; 
+  font-family: url("../fonts/Gagalin/Gagalin-Regular.otf");
+  font-style: normal; 
+  font-weight: normal;
+}
+
+$red: #e45028;
+$yellow: #f9b43b;
+
+//setting
+@import url(./loyout/normalize.css);
+@import url(./loyout/reset.css);
+@import url(./loyout/loyout.css); 
+
+//blocks
+@import "block/hero.scss";
+@import "block/header.scss";
+@import "block/nav.scss"; 
+@import "block/btn.scss"; 
+@import "block/title.scss";
+@import "block/best.scss";
