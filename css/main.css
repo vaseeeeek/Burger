@@ -160,3 +160,10 @@
 
 .best__desc {
   text-align: center; }
+
+.team {
+  background: url("../../img/team-bg.png") center center/cover no-repeat; }
+
+.team__wrapper {
+  background: url("../../img/team__wrapper-bg.png") center center/cover no-repeat;
+  width: 50%; }

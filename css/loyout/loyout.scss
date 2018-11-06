@@ -13,4 +13,8 @@
     &--without-align {
       justify-content : initial;
     }
+    &--flex-end-right {
+      flex-direction: initial;
+      justify-content: flex-end;
+    }
 }
