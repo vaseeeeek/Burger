@@ -4,4 +4,11 @@
   background: $red;
   color: #fff;
   text-decoration: none;
+  text-transform: uppercase;
+   &--bg-black {
+     background: #2f3234;
+     width: 30%;
+     text-transform: initial;
+     text-align: center
+   }
 }
