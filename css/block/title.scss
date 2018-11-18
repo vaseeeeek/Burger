@@ -1,12 +1,25 @@
 .title {
   color: $yellow;
-  font-size: 72px;
-  margin-bottom: 35px;
+  font-size: 5.1429rem;
+  margin-bottom: 2.5rem;
   text-align: center;
   font-family: "Gagalin";
   font-style: normal;
 
   &--color-black {
     color:black;
+  }
+  &--team{
+    text-align: left;
+    @include tablets {
+      text-align: center;
+    }
+  }
+  &--menu {
+    text-align: left;
+    color: #fff;
+    margin-left: 6.4286rem;
+    padding-top: 7.1429rem;
+    float: left;
   }
 }

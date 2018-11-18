@@ -1,0 +1,225 @@
+.order {
+  background: url("../img/order-bg.png") center center / cover no-repeat;
+}
+
+.form{
+  color: #fff;
+  display: flex;
+  @include tablets {
+    flex-direction: column;
+    width: 61%;
+  }
+  @include phones {
+    flex-direction: column;
+    width: 95%;
+  }
+}
+
+
+
+input:focus {
+  border-color:$red;
+}
+
+input:active {
+  border-color:$red;
+}
+
+input:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+textarea:focus {
+  border-color:$red;
+}
+
+textarea:active {
+  border-color:$red;
+}
+
+textarea:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+
+.form__post{
+  flex: 1;
+  &:first-child{
+  margin-right: 1.4286rem;
+  @include tablets {
+    margin-right: 0;
+  }
+  &--phones{
+    @include phones {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+}
+
+.form__row {
+display: flex;
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 1.4286rem;
+
+  &--title {
+    font-size: 1rem;
+    font-family: 'Ubuntu';
+    margin-bottom: 0.5rem;
+    user-select: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--no-margin {
+    margin-right: 0;
+  }
+
+}
+
+.form__input {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 1.4286rem;
+  border-radius: 0.3571rem;
+}
+
+.form__textarea{
+  width: 100%;
+  border-radius: 0.3571rem;
+  resize: none;
+  height: 8.5rem;
+  margin-bottom: 1.4286rem;
+}
+
+.review__buttons{
+  width: 100%;
+  display: flex;
+  margin-bottom: 1.4286rem;
+  &-photo {
+    width: 100%;
+  }
+}
+
+.review__controls {
+  user-select: none;
+  @include phones {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.review__radio {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.review__radeo-real {
+  display: none;
+}
+
+.review__radio:last-child{
+  margin-left:1.4286rem;
+}
+
+.review__radio-visible {
+  width: 1.4286rem;
+  height: 1.4286rem;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+}
+
+.review__radio-text {
+  margin-left: 0.3571rem;
+  font-size: 1rem;
+  font-family: 'Ubuntu';
+}
+
+.review__radeo-real:checked ~ .review__radio-visible:after {
+  opacity: 1;
+}
+
+.review__radio-visible:after {
+  content: "";
+  display: block;
+  width: 0.5714rem;
+  height: 0.5714rem;
+  border-radius: 50%;
+  background: #e35028;
+  position: absolute;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.form__buttons-submit{
+  @include phones {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.form__buttons{
+  cursor:pointer;
+  width: 6.9286rem;
+  height: 2.5rem;
+  color: #fff;
+  background-color: $red;
+  border: none;
+  border-radius: 0.3571rem;
+  font-family: 'Ubuntu';
+  font-size: 1rem;
+  user-select: none;
+    &--opacity{
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            margin-right: 0.5714rem;
+      }
+    &--text-transform  {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  
+}
+
+.checkbox {
+	position:relative;
+  padding-left:1.7857rem;
+  margin-bottom: 1.6rem;
+  @include phones {
+    width: 30%;
+    margin-left: 31%;
+    margin-right: 35%;
+  }
+}
+.checkbox input[type=checkbox] {
+	display:none;
+}
+.checkbox label:after {
+  content:'';
+  background: #fff;
+	display:block;
+	height:1rem;
+	width:1rem;
+	outline:1px solid #939598;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.checkbox input[type=checkbox]:checked + label:after {
+  background: #fff url(../../img/galka.png) center center no-repeat;
+}

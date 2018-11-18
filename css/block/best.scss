@@ -4,18 +4,31 @@
 
 .best__list {
   display: flex;
+  @include phones {
+    flex-direction: column;
+  }
 }
 .best__item{
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include phones {
+    flex-direction: initial;
+  }
+  
 }
 
+.best__img {
+  margin-right: 5.8%;
+}
 .best__title {
   font-family: 'Lifehack';
 }
 
 .best__desc {
   text-align: center;
+  @include phones {
+    text-align: left;
+  }
 }

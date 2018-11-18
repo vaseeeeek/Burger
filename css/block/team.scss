@@ -1,7 +1,64 @@
 .team {
   background: url("../../img/team-bg.png") center center / cover no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
 }
 .team__wrapper {
   background: url("../../img/team__wrapper-bg.png") center center / cover no-repeat;
+  min-height: 100%;
   width: 50%;
+  @include tablets {
+    width: 100%;
+  }
+  
 }
+
+.team__desc {
+  padding: 15% 15% 0 15%;
+  height: 100%;
+  
+}
+
+.team__members {
+  padding-bottom: 6%;
+  @include tablets {
+    text-align: center;
+  }
+ 
+  &:hover .team__members__desc {
+    overflow: auto;
+    height: 84%;
+  }
+  &:hover .team__members__name{
+    color: $yellow;
+  }
+}
+
+.team__members__name{
+  color:#FFF;
+  font-family: 'Gagalin';
+  
+}
+
+.team__members__desc{
+  font-family: "Ubuntu";
+  color: #FFF;
+  overflow: hidden;
+  height: 0;
+  display: flex;
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.team__members__profession {
+  display: flex;
+  flex-direction: column;
+}
+
+.team__members__profession-name {
+  font-weight: bold;
+  margin-bottom: 1.4286rem;
+}
+

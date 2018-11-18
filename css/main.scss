@@ -36,11 +36,17 @@
 
 $red: #e45028;
 $yellow: #f9b43b;
+$tablets: 768px;
+$phones: 480px;
+
+//breakpoints
+@import "loyout/media.scss";
 
 //setting
 @import url(./loyout/normalize.css);
 @import url(./loyout/reset.css);
-@import url(./loyout/loyout.css); 
+@import "loyout/loyout.scss";
+// @import url(./loyout/loyout.css); 
 
 //blocks
 @import "block/hero.scss";
@@ -51,3 +57,6 @@ $yellow: #f9b43b;
 @import "block/best.scss";
 @import "block/team.scss";
 @import "block/reviews.scss";
+@import "block/menu.scss";
+@import "block/maps.scss";
+@import "block/form.scss";

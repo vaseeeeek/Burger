@@ -1,10 +1,14 @@
 .nav{
-  margin-right:15px;
+  margin-right:1.0714rem;
   font-family: 'Ubuntu', sans-serif;
 }
 
 .nav__list {
   display:flex;
+  
+  @include tablets {
+    display: none;
+  }
 }
 
 .nav__item:last-child .nav__link:after {
@@ -14,19 +18,19 @@
 .nav__link {
   text-decoration: none;
   color: #fff;
-  font-size: 13px;
+  font-size: 0.9286rem;
   text-transform: uppercase;
   display: flex;
   align-items: center;
 
   &:after {
     content: "";
-    width: 4px;
-    height: 4px;
+    width: 0.2857rem;
+    height: 0.2857rem;
     display: block;
     border-radius: 50%;
     background: #fff;
-    margin: 0 10px;
+    margin: 0 0.7143rem;
   }
 }
 

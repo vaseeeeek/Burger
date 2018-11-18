@@ -1,19 +1,42 @@
 .hero {
-  background:url("../../img/hero-img.png") center center / cover no-repeat;
-} 
+  background: url("../../img/hero-img.png") center center / cover no-repeat;
+}
 
 .hero__desc {
   font-family: 'Lifehack';
-  font-size: 45px;
+  font-size: 3.2143rem;
   color: #fff;
 }
 
+.hero__container {
+  flex: .75;
+}
 
 .hero__content {
   display: flex;
   align-items: center;
+  @include tablets {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-.hero__container{
-  flex: .75
+.hero__picture{
+ 
+  width: 100%;
+}
+
+.hero__picture,
+.hero__text {
+  @include tablets {
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+  }
+}
+
+.hero__burger-img {
+  width: 100%;
+  height: 100%;
 }

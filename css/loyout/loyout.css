@@ -1,10 +1,14 @@
+html {
+  font-size: 14px; }
+
 .section {
   height: 100vh;
-  min-height: 650px; }
+  min-height: 46.4286rem; }
 
 .container {
   margin: 0 auto;
-  width: 940px;
+  width: 100%;
+  max-width: 67.1429rem;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,3 +32,14 @@
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
+  .container--maps {
+    height: 4.2857rem;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -ms-flex-direction: initial;
+    flex-direction: initial; }
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden; }

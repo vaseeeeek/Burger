@@ -1,20 +1,52 @@
+html {
+  font-size: 14px;
+  @include tablets {
+    font-size: 12px;
+  }
+  @include phones {
+    font-size: 10px;
+  }
+}
+
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 46.4286rem;
 }
+
 .container {
   margin: 0 auto;
-  width: 940px; 
+  width: 100%;
+  max-width: 67.1429rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @include tablets {
+    width: 95%;
+  }
+  &--without-align {
+    justify-content: initial;
+  }
+  &--flex-end-right {
+    flex-direction: initial;
+    justify-content: flex-end;
+  }
+  &--maps {
+    height: 4.2857rem;
+    flex-direction: initial;
+    @include phones {
+      flex-direction: column;
+    }
+  }
+  &--form-tablets {
+    @include tablets {
+      align-items: center;
+    }
+  }
+}
 
-    &--without-align {
-      justify-content : initial;
-    }
-    &--flex-end-right {
-      flex-direction: initial;
-      justify-content: flex-end;
-    }
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
 }
