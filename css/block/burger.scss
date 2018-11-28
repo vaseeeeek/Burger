@@ -1,0 +1,130 @@
+.burger {
+  background: linear-gradient(to top, #f9b43b, #eb8d38, #f8b23b);
+}
+
+.arrow-icon__left {
+  transform: rotate(90deg);
+}
+
+.arrow-icon__right {
+  transform: rotate(-90deg);
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.burger-content {
+  display: flex;
+  align-items: center;
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.burger-img {
+  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // width: 32.5rem;
+  flex: 1;
+  height: 33.9286rem;
+  &--icon {
+    max-width: 100%;
+  }
+  @include tablets {
+    margin-top: 13%;
+  }
+
+}
+
+.burger-img__composition {
+  width: 6.4286rem;
+  height: 6.4286rem;
+  text-align: center;
+  background: #f08c33;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Gagalin';
+  position: absolute;
+  top:-46px;
+  @include tablets {
+    top: -50px;
+    left:30px
+  }
+}
+
+.burger-img__kkal{
+  color: #fff;
+  font-family: 'Gagalin';
+  width: 4.5714rem;
+  position: absolute;
+  top: 380px;
+  &__text {
+    margin-top: -30px;
+    margin-bottom: 15px;
+    margin-left: 17px;
+    @include tablets {
+      margin-left: 0;
+    }
+    &--no-margin {
+      margin-top: -0px;
+      margin-bottom: 0px;
+      // margin-left: 15px;
+      text-align: center;
+    }
+  }
+  @include tablets {
+    width: 6.4286rem;
+    top: -50px;
+    right:30px
+  }
+}
+
+.burger-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__recipe {
+    color: #fff;
+    font-family: "Ubuntu";
+    font-size: 1rem;
+    @include tablets {
+      width: 86%;
+      margin-bottom: 2.8571rem;
+    }
+  }
+  &__order-price{
+    display: block;
+    float: left;
+    color: #e35028;
+    margin-right: 2.1429rem;
+    font-family: "Gagalin";
+    font-size: 2.5714rem;
+  }
+  @include tablets {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.btn--red--burger {
+  display: inline-block;
+  margin-top: 3rem;
+}
+
+.price  {
+  font-family: "Gagalin";
+  font-size: 5.1429rem;
+  font-weight: 700;
+  color: #e35028;}

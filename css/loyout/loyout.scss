@@ -38,6 +38,9 @@ html {
       flex-direction: column;
     }
   }
+  &--burger{
+    flex-direction: initial;
+  }
   &--form-tablets {
     @include tablets {
       align-items: center;

@@ -22,4 +22,11 @@
     padding-top: 7.1429rem;
     float: left;
   }
+  &--burger {
+    color: #fff;
+    text-align: left;
+    @include tablets {
+      text-align: center;
+    }
+  }
 }

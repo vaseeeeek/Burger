@@ -13,7 +13,11 @@
 .contact__desc{
   padding-top: 1.4286rem;
   flex: 1;
-  text-align: center;
+  text-align: left;
+  @include phones {
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .contact__adress {
@@ -30,6 +34,10 @@
   &__item {
     color:#fff;
     padding:1.4286rem 0 0 1.4286rem;
+    @include phones {
+      padding: 0 0 0 1.4286rem;
+      justify-content: center;
+    }
   }
   &__list {
     display: flex;
