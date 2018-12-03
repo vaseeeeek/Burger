@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./js/order.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./js/team.js"></script>
 </head>
 
 <body>
@@ -53,6 +58,12 @@
               </div>
             </div>
           </div>
+          <div class="slide-down__arrow">
+            <svg class="arrow-icon__down" width="1.9286rem" height="1rem" viewBox="0 0 28.685 14.479">
+              <use xlink:href="./icons/sprit.svg#arrow"></use>
+          </svg>
+          </div>
+
         </div>
         <a href="" class="to-next-section"></a>
       </section>
@@ -170,20 +181,20 @@
                     </div>
                   </div>
                 </li>
-                <li class="team__members">
-                  <div class="team__members__name">РИЧАРД ДЖЕЙМС</div>
-                  <div class="team__members__desc">
+                <li class="team__members team__members--active">
+                  <div class="team__members__name team__members__name--active">РИЧАРД ДЖЕЙМС</div>
+                  <div class="team__members__desc team__members__desc--active">
                     <div class="team__members__img">
                       <img src="./img/team-member.png" alt="" class="team__members__icon">
                     </div>
                     <div class="team__members__profession">
-                      <div class="team__members__profession-name">Оператор</div>
-                      <div class="team__members__profession-desc">С радостью поможет подобрать идеальный бургер и
+                      <div class="team__members__profession-name team__members__profession-name--active">Оператор</div>
+                      <div class="team__members__profession-desc team__members__profession-desc--active">С радостью поможет подобрать идеальный бургер и
                         оформить заказ. </div>
                     </div>
                   </div>
                 </li>
-                <li class="team__members">
+                <li class="team__members" >
                   <div class="team__members__name">ДЖЕЙК ФИНН</div>
                   <div class="team__members__desc">
                     <div class="team__members__img">
@@ -218,7 +229,7 @@
         <div class="container__menu">
           <div class="title title--menu">Меню</div>
           <ul class="menu-list">
-            <li class="menu-list__item" style="background: url(../../img/meat.png) center center/ cover no-repeat;">
+            <li class="menu-list__item" style="background: url(./img/menu-meet.png) center center/ cover no-repeat;">
               <div class="menu-list__title"><span>Для мясоедов</span></div> 
                 <div class="menu-list__content">
                     Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
@@ -233,7 +244,7 @@
                     чутко относиться к слову.
                 </div>
             </li>
-            <li class="menu-list__item" style="background: url(./img/vegan.png) center center/ cover no-repeat;">
+            <li class="menu-list__item" style="background: url(./img/menu-vegan.png) center center/ cover no-repeat;">
               <div class="menu-list__title">
                 <span>Вегетерианское</span></div>
               <div class="menu-list__content">
@@ -359,50 +370,50 @@
       <section class="section order">
         <div class="container container--form-tablets">
           <div class="title">закажите доставку</div>
-          <form action="" class="form">
+          <form action="" class="form" id="form__order">
             <div class="form__post">
               <div class="form__row">
                 <label for="" class="form__block">
                   <div class="form__block--title">Имя</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="name" required>
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block--title">Телефон</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block--title" >Телефон</div>
+                  <input type="text" class="form__input" name="phone" id="phoneNumber" required>
                 </label>
               </div>
               <div class="form__row">
                 <label for="" class="form__block">
-                  <div class="form__block--title">Улица</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block--title" >Улица</div>
+                  <input type="text" class="form__input" name="street" required>
                 </label>
               </div>
               <div class="form__row">
                 <label for="" class="form__block">
                   <div class="form__block--title">Дом</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="house" required>
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block--title">Корпус</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block--title" >Корпус</div>
+                  <input type="text" class="form__input" name="korpus" required>
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block--title">Квартира</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block--title" >Квартира</div>
+                  <input type="text" class="form__input" name="apartment" required>
                 </label>
                 <label for="" class="form__block">
                   <div class="form__block--title">Этаж</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="floor" required>
                 </label>
               </div>
             </div>
             <div class="form__post form__post--phones">
               <label for="" class="form__block form__block--no-margin">
                 <div class="form__block--title">Комментарий</div>
-                <textarea name="" id="" cols="30" rows="10" class="form__textarea"></textarea>
+                <textarea name="" id="" cols="30" rows="10" class="form__textarea" name="coments"></textarea>
               </label>
               <div class="checkbox">
-                  <input type="checkbox" id="check">
+                  <input type="checkbox" id="check" name="call-back">
                   <label for="check" class="form__block--title">Не перезванивать</label>
               </div>    
               <div class="review__buttons">
@@ -422,8 +433,8 @@
                 </div>
               </div>
               <div class="form__buttons-submit">
-                <a href="#" class="btn btn--red">заказать</a>
-                <button class="form__buttons form__buttons--opacity" type="submit">
+                <button type="submit" class="order__submit">Заказать</button>
+                <button class="form__buttons form__buttons--opacity" type="reset">
                   <div class="form__buttons-text">Очистить</div>
                   <div class="form__buttons-img"></div>
                 </button>
@@ -514,7 +525,7 @@
       </section>
     </div>
   </div>
-  <script src="./js/main.js"></script>
+  
 </body>
 
 </html>

@@ -4,6 +4,7 @@
   justify-content: flex-end;
   height: 100%;
 }
+
 .team__wrapper {
   background: url("../../img/team__wrapper-bg.png") center center / cover no-repeat;
   min-height: 100%;
@@ -11,37 +12,41 @@
   @include tablets {
     width: 100%;
   }
-  
 }
 
 .team__desc {
   padding: 15% 15% 0 15%;
   height: 100%;
-  
 }
 
 .team__members {
   padding-bottom: 6%;
+  position: relative;
   @include tablets {
     text-align: center;
   }
- 
-  &:hover .team__members__desc {
-    overflow: auto;
-    height: 84%;
-  }
-  &:hover .team__members__name{
-    color: $yellow;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    border: 5px solid transparent;
+    border-top: 5px solid $yellow;
+    transform: rotate(0deg);
+    transition: .5s;
+    @include tablets {
+      left: 25%;
+    }
   }
 }
 
-.team__members__name{
-  color:#FFF;
+.team__members__name {
+  color: #FFF;
   font-family: 'Gagalin';
-  
+  margin-bottom: 5%;
 }
 
-.team__members__desc{
+.team__members__desc {
   font-family: "Ubuntu";
   color: #FFF;
   overflow: hidden;
@@ -62,3 +67,30 @@
   margin-bottom: 1.4286rem;
 }
 
+.team__members--active {
+  &:before {
+    transform: rotate(180deg);
+  }
+  &__desc--active {
+    overflow: auto;
+    height: 84%;
+  }
+  &__name--active {
+    color: $yellow;
+  }
+}
+
+.team__members--active {
+  &:before {
+    transform: rotate(180deg);
+  }
+}
+
+.team__members__name--active {
+  color: $yellow;
+}
+
+.team__members__desc--active{
+  overflow: auto;
+  height: 84%;
+}

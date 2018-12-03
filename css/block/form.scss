@@ -223,3 +223,12 @@ display: flex;
 .checkbox input[type=checkbox]:checked + label:after {
   background: #fff url(../../img/galka.png) center center no-repeat;
 }
+.order__submit {
+border: 0px;
+border-radius: 0.3571rem;
+padding:0.9286rem 1.0714rem;
+background: $red;
+color: #fff;
+text-decoration: none;
+text-transform: uppercase;
+}

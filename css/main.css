@@ -152,6 +152,15 @@ html {
   width: 100%;
   height: 100%; }
 
+.slide-down__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 10%; }
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,7 +256,8 @@ html {
   margin-bottom: 2.5rem;
   text-align: center;
   font-family: "Gagalin";
-  font-style: normal; }
+  font-style: normal;
+  white-space: nowrap; }
   .title--color-black {
     color: black; }
   .title--team {
@@ -309,6 +319,9 @@ html {
 .best__title {
   font-family: 'Lifehack'; }
 
+.best__text {
+  font-family: "Ubuntu"; }
+
 .best__desc {
   text-align: center; }
   @media (max-width: 480px) {
@@ -338,19 +351,32 @@ html {
   height: 100%; }
 
 .team__members {
-  padding-bottom: 6%; }
+  padding-bottom: 6%;
+  position: relative; }
   @media (max-width: 768px) {
     .team__members {
       text-align: center; } }
-  .team__members:hover .team__members__desc {
-    overflow: auto;
-    height: 84%; }
-  .team__members:hover .team__members__name {
-    color: #f9b43b; }
+  .team__members:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    border: 5px solid transparent;
+    border-top: 5px solid #f9b43b;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+    @media (max-width: 768px) {
+      .team__members:before {
+        left: 25%; } }
 
 .team__members__name {
   color: #FFF;
-  font-family: 'Gagalin'; }
+  font-family: 'Gagalin';
+  margin-bottom: 5%; }
 
 .team__members__desc {
   font-family: "Ubuntu";
@@ -379,6 +405,30 @@ html {
 .team__members__profession-name {
   font-weight: bold;
   margin-bottom: 1.4286rem; }
+
+.team__members--active:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.team__members--active__desc--active {
+  overflow: auto;
+  height: 84%; }
+
+.team__members--active__name--active {
+  color: #f9b43b; }
+
+.team__members--active:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.team__members__name--active {
+  color: #f9b43b; }
+
+.team__members__desc--active {
+  overflow: auto;
+  height: 84%; }
 
 .reviews {
   background: black; }
@@ -828,6 +878,15 @@ textarea:active, :hover, :focus {
 
 .checkbox input[type=checkbox]:checked + label:after {
   background: #fff url(../../img/galka.png) center center no-repeat; }
+
+.order__submit {
+  border: 0px;
+  border-radius: 0.3571rem;
+  padding: 0.9286rem 1.0714rem;
+  background: #e45028;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase; }
 
 .burger {
   background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(#eb8d38), to(#f8b23b));
