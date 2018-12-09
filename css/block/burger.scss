@@ -33,12 +33,13 @@
   flex-direction: column;
   justify-content: center; // width: 32.5rem;
   flex: 1;
+  width: 50%;
   height: 33.9286rem;
   &--icon {
     max-width: 100%;
   }
   @include tablets {
-    margin-top: 13%;
+    // margin-top: 13%;
   }
 
 }
@@ -58,7 +59,7 @@
   position: absolute;
   top:-46px;
   @include tablets {
-    top: -50px;
+    top: 0px;
     left:30px
   }
 }
@@ -85,13 +86,14 @@
   }
   @include tablets {
     width: 6.4286rem;
-    top: -50px;
+    top: 0px;
     right:30px
   }
 }
 
 .burger-description {
   flex: 1;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,7 +122,8 @@
 
 .btn--red--burger {
   display: inline-block;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  position: absolute;
 }
 
 .price  {
@@ -128,3 +131,5 @@
   font-size: 5.1429rem;
   font-weight: 700;
   color: #e35028;}
+
+  

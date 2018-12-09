@@ -28,15 +28,18 @@
   display: flex;
 }
 
-.menu-list__item_active .menu-list__title {
-  color: #f9b43b;
-}
-
-.menu-list__item_active .menu-list__content {
-  max-width: 38.5714rem;
-  padding: 4.4286rem 2.5rem;
-  visibility: visible;
-  opacity: 1;
+.menu-list__item_active {
+  .menu-list__title{
+    color: #f9b43b;
+  }
+  .menu-list__content {
+    max-height: 100%;
+    max-width: 38.5714rem;
+    padding: 4.4286rem 2.5rem;
+    visibility: visible;
+    opacity: 1;
+  }
+  
 }
 
 .menu-list__title {
@@ -72,8 +75,9 @@
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.714;
   max-width: 0px;
+  max-height: 0px;
   visibility: hidden;
   opacity: 0;
-  transition: 1s;
-  transition-property: max-width, opacity, visibility;
+  transition: 1.5s;
+  transition-property: max-height, max-width, opacity, visibility;
 }

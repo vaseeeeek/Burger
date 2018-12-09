@@ -67,30 +67,15 @@
   margin-bottom: 1.4286rem;
 }
 
-.team__members--active {
-  &:before {
-    transform: rotate(180deg);
+.team__members--active{
+  .team__members__name{
+    color: $yellow;
   }
-  &__desc--active {
+  .team__members__desc{
     overflow: auto;
     height: 84%;
   }
-  &__name--active {
-    color: $yellow;
-  }
-}
-
-.team__members--active {
   &:before {
     transform: rotate(180deg);
-  }
-}
-
-.team__members__name--active {
-  color: $yellow;
-}
-
-.team__members__desc--active{
-  overflow: auto;
-  height: 84%;
+    }
 }

@@ -14,21 +14,27 @@
   <script src="./js/order.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="./js/team.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/hummenu.js"></script>
+  <script src="./js/reviews.js"></script>
+  <script src="./js/app.js"></script>
+  
+  
 </head>
 
 <body>
   <div class="wrapper">
     <div class="maincontent">
-      <section class="hero section">
+      <section class="section hero section__activ">
         <div class="container container--without-align">
           <header class="header">
             <div href="" class="logo">
-                <svg class="logo-icon" width="98.265px" height="74.317px" viewBox="0 0 98.265 74.317">
-                    <use xlink:href="./icons/sprit.svg#logo"></use>
-                  </svg>
+              <svg class="logo-icon" width="98.265px" height="74.317px" viewBox="0 0 98.265 74.317">
+                <use xlink:href="./icons/sprit.svg#logo"></use>
+              </svg>
             </div>
             <div class="header__buttons">
-              <nav class="nav">
+              <nav class="nav" id="nav">
                 <ul class="nav__list">
                   <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
                   <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
@@ -41,10 +47,31 @@
               </nav>
               <a href="#" class="btn btn--red">заказать</a>
               <a class="hamb-menu__link" href="#">
-                <div class="hamb-menu__img">
+                <div class="hamb-menu__img" id="openMenu">
                   <img src="./img/burg-menu.png" alt="" class="hamb-menu__img-icon">
                 </div>
               </a>
+              <div class="hide-menu" id="hide-menu">
+                <nav class="nav-hide" id="nav">
+                  <div href="#" class="logo logo--hide">
+                    <svg class="logo-icon" width="98.265px" height="74.317px" viewBox="0 0 98.265 74.317">
+                      <use xlink:href="./icons/sprit.svg#logo"></use>
+                    </svg>
+                  </div>
+                  <ul class="nav-hide__list">
+                    <li class="nav-hide__item"><a href="#" class="nav-hide__link">О нас</a></li>
+                    <li class="nav-hide__item"><a href="#" class="nav-hide__link">Бургеры</a></li>
+                    <li class="nav-hide__item"><a href="#" class="nav-hide__link">Команда</a></li>
+                    <li class="nav-hide__item"><a href="#" class="nav-hide__link">Меню</a></li>
+                    <li class="nav-hide__item"><a href="#" class="nav-hide__link">Отзывы</a></li>
+                    <li class="nav-hide__item"><a href="#" class="nav-hide__link">Как мы работаем</a></li>
+                    <li class="nav-hide__item"><a href="#" class="nav-hide__link">Контакты</a></li>
+                  </ul>
+                  <div href="#" class="x-hide" id='closeMenu'>
+                    <img src="./img/x.png" alt="">
+                  </div>
+                </nav>
+              </div>
             </div>
           </header>
           <div class="hero__container">
@@ -61,13 +88,13 @@
           <div class="slide-down__arrow">
             <svg class="arrow-icon__down" width="1.9286rem" height="1rem" viewBox="0 0 28.685 14.479">
               <use xlink:href="./icons/sprit.svg#arrow"></use>
-          </svg>
+            </svg>
           </div>
 
         </div>
         <a href="" class="to-next-section"></a>
       </section>
-      <section class="best section">
+      <section class="section best">
         <div class="container">
           <div class="title title--color-black">Мы лучшие</div>
           <ul class="best__list">
@@ -86,9 +113,9 @@
             </li>
             <li class="best__item">
               <div class="best__img">
-                  <svg class="hand-icon" width="6.9286rem" height="6.3571rem" viewBox="0 0 73 85.875">
-                      <use xlink:href="./icons/sprit.svg#hand"></use>
-                    </svg>
+                <svg class="hand-icon" width="6.9286rem" height="6.3571rem" viewBox="0 0 73 85.875">
+                  <use xlink:href="./icons/sprit.svg#hand"></use>
+                </svg>
               </div>
               <div class="best__desc">
                 <div class="best__title">Ручная сборка</div>
@@ -100,12 +127,12 @@
             </li>
             <li class="best__item">
               <div class="best__img">
-                  <svg class="natural-icon" width="6.9286rem" height="6.3571rem" viewBox="0 0 88 75.534">
-                      <use xlink:href="./icons/sprit.svg#natural"></use>
-                    </svg>
+                <svg class="natural-icon" width="6.9286rem" height="6.3571rem" viewBox="0 0 88 75.534">
+                  <use xlink:href="./icons/sprit.svg#natural"></use>
+                </svg>
               </div>
               <div class="best__desc">
-                <div class="best__title">Натуральные
+                <div class="best__title">Натуральные</br>
                   ингредиенты</div>
                 <div class="best__text">
                   <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
@@ -115,54 +142,56 @@
           </ul>
         </div>
       </section>
-      <section class="burger section">
+      <section class="section burger">
         <div class="container container--burger">
           <div class="slide slide--left">
             <div class="slide-left__arrow" id="moveBack">
               <svg class="arrow-icon__left" width="1.9286rem" height="1rem" viewBox="0 0 28.685 14.479">
                 <use xlink:href="./icons/sprit.svg#arrow"></use>
-            </svg>
+              </svg>
             </div>
           </div>
           <div class="burger-content">
             <div class="burger-img">
               <div class="burger-img__composition">
-                  <svg class="burger-img__buns--svg"  width="45.748px" height="44.625px" viewBox="0 0 45.748 44.625">
-                      <use xlink:href="./icons/sprit.svg#buns"></use>
-                  </svg>
-                  <p>состав</p>
+                <svg class="burger-img__buns--svg" width="45.748px" height="44.625px" viewBox="0 0 45.748 44.625">
+                  <use xlink:href="./icons/sprit.svg#buns"></use>
+                </svg>
+                <p>состав</p>
               </div>
               <img src="./img/darkburger.png" alt="" class="burger-img--icon">
               <div class="burger-img__kkal">
-                  <svg class="burger-img__kkal--svg" width="4.2857rem" height="4.2857rem" viewBox="0 0 60 60.178">
-                      <use xlink:href="./icons/sprit.svg#kkal"></use>
-                  </svg>
-                  <p class="burger-img__kkal__text">1200</p>
-                  <p class="burger-img__kkal__text--no-margin">ккал</p>
+                <svg class="burger-img__kkal--svg" width="4.2857rem" height="4.2857rem" viewBox="0 0 60 60.178">
+                  <use xlink:href="./icons/sprit.svg#kkal"></use>
+                </svg>
+                <p class="burger-img__kkal__text">1200</p>
+                <p class="burger-img__kkal__text--no-margin">ккал</p>
               </div>
             </div>
             <div class="burger-description">
               <div class="title title--burger">dark beef</br>burger</div>
               <div class="burger-description__recipe">
-                <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                  эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                  чураско.</p>
               </div>
               <div class="burger-description__order">
                 <p class="burger-description__order-price"><span class="price">500 </span>рублей</p>
                 <a href="#" class="btn btn--red btn--red--burger">заказать</a>
               </div>
-        
+
             </div>
           </div>
           <div class="slide slide--right">
             <div class="slide-right__arrow" id="moveForward">
-              <svg class="arrow-icon__right" width="1.9286rem" height="1rem" viewBox="0 0 28.685 14.479" >
+              <svg class="arrow-icon__right" width="1.9286rem" height="1rem" viewBox="0 0 28.685 14.479">
                 <use xlink:href="./icons/sprit.svg#arrow"></use>
-            </svg>
+              </svg>
             </div>
           </div>
         </div>
       </section>
-      <section class="team section">
+      <section class="section team">
         <div class="team__wrapper">
           <div class="team__desc">
             <div class="title title--team">КОМАНДА</div>
@@ -189,12 +218,13 @@
                     </div>
                     <div class="team__members__profession">
                       <div class="team__members__profession-name team__members__profession-name--active">Оператор</div>
-                      <div class="team__members__profession-desc team__members__profession-desc--active">С радостью поможет подобрать идеальный бургер и
+                      <div class="team__members__profession-desc team__members__profession-desc--active">С радостью
+                        поможет подобрать идеальный бургер и
                         оформить заказ. </div>
                     </div>
                   </div>
                 </li>
-                <li class="team__members" >
+                <li class="team__members">
                   <div class="team__members__name">ДЖЕЙК ФИНН</div>
                   <div class="team__members__desc">
                     <div class="team__members__img">
@@ -230,29 +260,32 @@
           <div class="title title--menu">Меню</div>
           <ul class="menu-list">
             <li class="menu-list__item" style="background: url(./img/menu-meet.png) center center/ cover no-repeat;">
-              <div class="menu-list__title"><span>Для мясоедов</span></div> 
-                <div class="menu-list__content">
-                    Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                    конструктивный
-                    механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
-                    чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как
-                    справедливо
-                    считает И.Гальперин, пространственно выбирает метр.
-                    Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                    конструктивный
-                    механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
-                    чутко относиться к слову.
-                </div>
+              <div class="menu-list__title"><span>Для мясоедов</span></div>
+              <div class="menu-list__content">
+                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                конструктивный
+                механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
+                чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как
+                справедливо
+                считает И.Гальперин, пространственно выбирает метр.
+                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                конструктивный
+                механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
+                чутко относиться к слову.
+              </div>
             </li>
             <li class="menu-list__item" style="background: url(./img/menu-vegan.png) center center/ cover no-repeat;">
               <div class="menu-list__title">
                 <span>Вегетерианское</span></div>
               <div class="menu-list__content">
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                конструктивный
                 механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
-                чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо
+                чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как
+                справедливо
                 считает И.Гальперин, пространственно выбирает метр.
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                конструктивный
                 механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
                 чутко относиться к слову.
               </div>
@@ -262,17 +295,20 @@
                 <span>Диетическое</span>
               </div>
               <div class="menu-list__content">
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                конструктивный
                 механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
-                чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо
+                чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как
+                справедливо
                 считает И.Гальперин, пространственно выбирает метр.
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                конструктивный
                 механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
                 чутко относиться к слову.
               </div>
             </li>
           </ul>
-    
+
         </div>
       </section>
       <section class="section reviews">
@@ -290,11 +326,12 @@
           </li>
           <li class="reviews__item" style="background-image: url('../img/rewiews-2.png')">
             <div class="reviews__hover--block">
-              <h3 class="reviews__title">Ирина</h3>
+              <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__text">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis quibusdam animi commodi ipsa
-                  blanditiis eum unde fuga doloribus ipsum deleniti. Nisi in ullam magnam commodi maiores beatae
-                  tempora perspiciatis dolorum.</p>
+                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что
+                  булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.Мысли все о них и
+                  о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
+                  такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 <div class="btn btn--bg-black">Подробнее</div>
               </div>
             </div>
@@ -366,7 +403,47 @@
             </div>
           </li>
         </ul>
+        <div class="reviews__hide-wrap">
+          <div class="reviews__hide">
+            <div class="reviews__full">
+              <div class="reviews__title">Константин Спилберг</div>
+              <div class="reviews__text">
+                <p>Мысли все о них и о них, о них и о них. Нельзя устоять,
+                  невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими,
+                  котлетка такой сочной, а сыр таким расплавленным.Мысли все о них и о них, о них
+                  и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
+                  такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+              </div>
+              <div class="x-red">
+                <img src="./img/x-red.png" alt="" class="x-red__img">
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+      <section class="section video">
+        <h2 class="title video__title">Как мы работаем</h2>
+        <div class="video__container">
+            <div class="video__player">
+                <video id="player" poster="./img/cover.png">
+                    <source src="./video/video.mp4" type="video/mp4">
+                </video>
+                <img src="./img/Play_white.png" alt="" class="play video__player-img">
+            </div>
+            <div class="video__toolbar">
+                <div class="duration">
+                    <img src="./img/Play_gray.png" alt="" class="play duration__img">
+                    <input type="range" class="duration__length" id="durationLevel">
+                </div>
+                <div class="sound">
+                    <img src="./img/Volum_gray.png" class="sound__mic" id="mic" alt="">
+                    <div class="sound__volume">
+                        <input type="range" class="duration__length duration__length--other" id="micLevel">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
       <section class="section order">
         <div class="container container--form-tablets">
           <div class="title">закажите доставку</div>
@@ -378,13 +455,13 @@
                   <input type="text" class="form__input" name="name" required>
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block--title" >Телефон</div>
+                  <div class="form__block--title">Телефон</div>
                   <input type="text" class="form__input" name="phone" id="phoneNumber" required>
                 </label>
               </div>
               <div class="form__row">
                 <label for="" class="form__block">
-                  <div class="form__block--title" >Улица</div>
+                  <div class="form__block--title">Улица</div>
                   <input type="text" class="form__input" name="street" required>
                 </label>
               </div>
@@ -394,11 +471,11 @@
                   <input type="text" class="form__input" name="house" required>
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block--title" >Корпус</div>
+                  <div class="form__block--title">Корпус</div>
                   <input type="text" class="form__input" name="korpus" required>
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block--title" >Квартира</div>
+                  <div class="form__block--title">Квартира</div>
                   <input type="text" class="form__input" name="apartment" required>
                 </label>
                 <label for="" class="form__block">
@@ -413,9 +490,9 @@
                 <textarea name="" id="" cols="30" rows="10" class="form__textarea" name="coments"></textarea>
               </label>
               <div class="checkbox">
-                  <input type="checkbox" id="check" name="call-back">
-                  <label for="check" class="form__block--title">Не перезванивать</label>
-              </div>    
+                <input type="checkbox" id="check" name="call-back">
+                <label for="check" class="form__block--title">Не перезванивать</label>
+              </div>
               <div class="review__buttons">
                 <div class="review__buttons-photo">
                   <div class="review__controls">
@@ -438,37 +515,39 @@
                   <div class="form__buttons-text">Очистить</div>
                   <div class="form__buttons-img"></div>
                 </button>
-              </div> 
+              </div>
             </div>
           </form>
         </div>
       </section>
-      <section class="maps section">
-          <div class="contact">
-            <div class="container container--maps">
-              <div class="contact__desc">
-                <div class="contact__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-                <div class="contact__phone">
-                    <svg class="phone-icon" width="0.7857rem" height="0.7857rem" viewBox="0 0 11 11">
-                        <use xlink:href="./icons/sprit.svg#phone"></use>
-                      </svg>
-                    +7 (812) 377-13-77
-                  </div>
+      <section class="section maps">
+        <div id="map" class="mymap"></div>
+        <div class="contact">
+          <div class="container container--maps">
+            <div class="contact__desc">
+              <div class="contact__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+              <div class="contact__phone">
+                <svg class="phone-icon" width="0.7857rem" height="0.7857rem" viewBox="0 0 11 11">
+                  <use xlink:href="./icons/sprit.svg#phone"></use>
+                </svg>
+                +7 (812) 377-13-77
               </div>
-              <div class="social">
-                <ul class="social__list">
-                  <li class="social__item social__item--vk">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="1.4286rem" height="1.4286rem" viewBox="0 0 126 72" enable-background="new 0 0 126 72" xml:space="preserve">
-<g>
-	<g>
-		<defs>
-			<rect id="SVGID_1_" width="126" height="72"/>
-		</defs>
-		<clipPath id="SVGID_2_">
-			<use xlink:href="#SVGID_1_"  overflow="visible"/>
-		</clipPath>
-		<path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M124.523,64.503c-0.152-0.328-0.293-0.597-0.426-0.816
+            </div>
+            <div class="social">
+              <ul class="social__list">
+                <li class="social__item social__item--vk">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" width="1.4286rem" height="1.4286rem" viewBox="0 0 126 72" enable-background="new 0 0 126 72"
+                    xml:space="preserve">
+                    <g>
+                      <g>
+                        <defs>
+                          <rect id="SVGID_1_" width="126" height="72" />
+                        </defs>
+                        <clipPath id="SVGID_2_">
+                          <use xlink:href="#SVGID_1_" overflow="visible" />
+                        </clipPath>
+                        <path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M124.523,64.503c-0.152-0.328-0.293-0.597-0.426-0.816
 			c-2.172-3.91-6.324-8.711-12.449-14.401l-0.129-0.134l-0.066-0.063l-0.066-0.066h-0.063c-2.781-2.651-4.543-4.434-5.281-5.344
 			c-1.348-1.738-1.652-3.5-0.914-5.281c0.523-1.348,2.477-4.19,5.867-8.538c1.781-2.302,3.195-4.149,4.234-5.539
 			c7.52-9.996,10.777-16.383,9.777-19.164l-0.387-0.649c-0.262-0.39-0.934-0.75-2.02-1.074c-1.086-0.327-2.477-0.383-4.172-0.163
@@ -497,35 +576,66 @@
 			c1.41,1.024,2.734,2.281,3.977,3.781c1.238,1.5,2.727,3.184,4.461,5.051c1.742,1.867,3.262,3.258,4.563,4.172l1.305,0.781
 			c0.871,0.524,2,1,3.391,1.435c1.391,0.437,2.605,0.547,3.648,0.327l16.688-0.262c1.648,0,2.934-0.272,3.844-0.815
 			c0.914-0.544,1.453-1.142,1.629-1.789c0.176-0.653,0.184-1.392,0.035-2.22C124.824,65.406,124.672,64.828,124.523,64.503
-			L124.523,64.503z M124.523,64.503"/>
-	</g>
-</g>
-                      </svg>
-                  </li>
-                  <li class="social__item social__item--fb">
-                    <svg class="fb-icon" width="1.4286rem" height="1.4286rem" viewBox="0 0 36.711 36.711">
-                      <use xlink:href="./icons/sprit.svg#fb"></use>
+			L124.523,64.503z M124.523,64.503" />
+                      </g>
+                    </g>
                   </svg>
                 </li>
-                  <li class="social__item social__item--inst">
-                    <svg class="inst-icon" width="1.4286rem" height="1.4286rem" viewBox="0 0 36.663 36.664">
-                      <use xlink:href="./icons/sprit.svg#inst"></use>
+                <li class="social__item social__item--fb">
+                  <svg class="fb-icon" width="1.4286rem" height="1.4286rem" viewBox="0 0 36.711 36.711">
+                    <use xlink:href="./icons/sprit.svg#fb"></use>
                   </svg>
-                  </li>
-                  <li class="social__item social__item--tw">
-                    <svg class="tw-icon" width="1.4286rem" height="1.1429rem" viewBox="0 0 37.453 31.21">
-                      <use xlink:href="./icons/sprit.svg#tw"></use>
+                </li>
+                <li class="social__item social__item--inst">
+                  <svg class="inst-icon" width="1.4286rem" height="1.4286rem" viewBox="0 0 36.663 36.664">
+                    <use xlink:href="./icons/sprit.svg#inst"></use>
                   </svg>
-                  </li>
-                </ul>
-              </div>
+                </li>
+                <li class="social__item social__item--tw">
+                  <svg class="tw-icon" width="1.4286rem" height="1.1429rem" viewBox="0 0 37.453 31.21">
+                    <use xlink:href="./icons/sprit.svg#tw"></use>
+                  </svg>
+                </li>
+              </ul>
             </div>
           </div>
-          
+        </div>
+
       </section>
     </div>
+    <ul class="fixed-menu">
+      <li class="fixed-menu__item active">
+        <a href="#" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item ">
+        <a href="#" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#" class="fixed-menu__link"></a>
+      </li>
+    </ul>  
   </div>
-  
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<8315189f-c807-41ea-b87f-d890c3eb6f8c>&lang=ru_RU" type="text/javascript">
+  </script>
+  <script src="./js/maps.js"></script>
 </body>
 
 </html>

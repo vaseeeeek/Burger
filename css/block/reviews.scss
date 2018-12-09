@@ -49,6 +49,9 @@
   color: #FFF;
   font-family: 'Gagalin';
   margin-bottom: 1.7857rem;
+  @include tablets{
+    margin-bottom: 0rem;
+  }
 }
 
 .reviews__text {
@@ -69,4 +72,45 @@
       display: none;
     }
   }
+}
+
+.reviews__hide-wrap{
+  display: none;
+}
+
+.reviews__hide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black center center/cover no-repeat;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__full {
+  position: relative;
+  background: #fff;
+  width: 32.8571rem;
+  height: 18.1429rem;
+  opacity: 1;
+  .reviews__title {
+    padding-top: 5%;
+    padding-left: 5%;
+    color: #000;
+  }
+  .reviews__text{
+    padding-left: 5%;
+    color: #000;
+  }
+}
+
+.x-red {
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }

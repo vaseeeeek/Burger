@@ -25,6 +25,7 @@
   &--burger {
     color: #fff;
     text-align: left;
+    word-wrap: break-word;
     @include tablets {
       text-align: center;
     }

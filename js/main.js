@@ -9,13 +9,14 @@ $().ready(function () {
     var parent = $(this).parent();
 
     if (parent.hasClass(activeClass)) {
-      parent.remove(activeClass)
+      parent.removeClass(activeClass);
     } else {
       btn.parent().removeClass(activeClass);
       parent.addClass(activeClass);
     }
-
   });
+
+
 
   let currentSlide = 0;
   let arrayImgList = ['../img/darkburger.png', '../slide/burger_sandwich_PNG4124.png', '../slide/Chiken burger.png', '../slide/NYC-Diner-Bacon-Cheeseburger.png', '../slide/Spicy_Shrimp_Burger.png']
