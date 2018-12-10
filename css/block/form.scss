@@ -232,3 +232,32 @@ color: #fff;
 text-decoration: none;
 text-transform: uppercase;
 }
+
+
+.modalOrder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.8;
+  display: none;
+  
+}
+
+.modalWindow_content {
+  background: #fff;
+  width: 22%;
+  height: 7%;
+  border-radius: 5px;
+  margin-left: 40%;
+    margin-top: 33%;
+    position: relative;
+}
+.order-x {
+  position: absolute;
+  top: -50%;
+  right: -25px;
+}
+

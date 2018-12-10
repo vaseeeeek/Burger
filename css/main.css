@@ -1004,6 +1004,30 @@ textarea:active, :hover, :focus {
   text-decoration: none;
   text-transform: uppercase; }
 
+.modalOrder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.8;
+  display: none; }
+
+.modalWindow_content {
+  background: #fff;
+  width: 22%;
+  height: 7%;
+  border-radius: 5px;
+  margin-left: 40%;
+  margin-top: 33%;
+  position: relative; }
+
+.order-x {
+  position: absolute;
+  top: -50%;
+  right: -25px; }
+
 .burger {
   background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(#eb8d38), to(#f8b23b));
   background: -webkit-linear-gradient(bottom, #f9b43b, #eb8d38, #f8b23b);
@@ -1145,6 +1169,7 @@ textarea:active, :hover, :focus {
         width: 86%;
         margin-bottom: 2.8571rem; } }
   .burger-description__order-price {
+    white-space: nowrap;
     display: block;
     float: left;
     color: #e35028;

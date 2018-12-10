@@ -5,4 +5,7 @@ $().ready(function (){
   $('#closeMenu').click(function(){
     $('#hide-menu').hide();
   });
+  $('#closeMenuOrder').click(function(){
+    $('.modalOrder').hide();
+  });
 });

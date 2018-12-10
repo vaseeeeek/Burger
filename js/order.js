@@ -9,16 +9,16 @@ $().ready(function(){
           console.log('done');
           $(".modalOrder").css('display', 'block');
           $(".modal__text").text('Сообщение отправлено');
-        }
-        fail: function(data) {
+        },
+        fail: function(data){
           $(".modalOrder").css('display', 'block');
           $(".modal__text").text('Произошла ошибка!');
           console.log(data);
-        })
+        }
       })
     }else{
       $(".modalOrder").css('display', 'block');
-      $(".modal__text").text('Укажите свои данные!');
+      $(".modal__text").text('Произошла ошибка!');
     }
   })
-}
+})
