@@ -38,7 +38,7 @@ $().ready(function () {
     },
     {
       src: '../slide/NYC-Diner-Bacon-Cheeseburger.png',
-      burgerName: 'Bacon Cheeseburger',
+      burgerName: 'Bacon \n Cheeseburger',
       title: 'Ваш старый добрый знакомый Bacon-Cheeseburger, с беконом, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.',
     },
     {
@@ -51,7 +51,6 @@ $().ready(function () {
 
 
   $('#moveBack').on('click', function () {
-    console.log('backward');
     if (currentSlide > 0) {
       currentSlide--;
       let current = objectList[currentSlide];
@@ -62,7 +61,6 @@ $().ready(function () {
   });
 
   $('#moveForward').on('click', function () {
-    console.log('forwardward');
     if (currentSlide < objectList.length - 1) {
       currentSlide++;
       let current = objectList[currentSlide];
